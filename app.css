@@ -3,7 +3,7 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: rgb(186, 199, 178);
-    background-image: url("./thumbnail_eraser.png");
+    background-image: url("./poster.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body {
 }
 
 .connect {
-    border: 1px solid #5db7cb;
+    border: 1px solid rgb(39, 236, 39);
     background: transparent;
     color: white;
     border-radius: 18px;
@@ -40,7 +40,7 @@ body {
 }
 
 .connect:hover {
-    background: rgb(198, 99, 252);
+    background: rgb(39, 236, 39);
     color: white;
 }
 
@@ -60,16 +60,20 @@ body {
 }
 
 .hero-title span {
-    color: rgb(198, 99, 252);
+   
+    color: rgb(76, 97, 76);
     font-weight: bold;
 }
 
+
+
 .hero-highlight {
-    color: #ffffff; /* Second h2 */
+    color: rgb(58, 111, 197); /* Second h2 */
     font-size: 32px;
     font-weight: bold;
     text-align: center;
-    
+    margin-top: 20px;
+
 }
 
 
@@ -88,6 +92,16 @@ body {
     margin: 20px 0;
     height: 20px;
 }
+
+.hero-highlight {
+    color: rgb(199, 44, 44); /* Second h2 */
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
 .troubleshootc{
     border:1px solid #191b1a;
     background: transparent;
@@ -101,7 +115,7 @@ body {
 }
 
 .troubleshootc:hover{
-    background: rgb(198, 99, 252);
+    background: rgb(39, 236, 39);
     color: white;
 }
 
@@ -116,7 +130,7 @@ body {
     cursor: pointer;
 }
 .troubleshoot:hover{
-    background: rgb(198, 99, 252);
+    background: rgb(39, 236, 39);
     color: white;
 }
 
@@ -132,7 +146,7 @@ body {
 }
 
 .stake-button:hover, .connect:hover {
-    background:rgb(198, 99, 252);
+    background:rgb(39, 236, 39);
     color: white;
 }
 
@@ -180,7 +194,7 @@ body {
     font-size: 10px;
 }
 .troubleshoot:hover{
-    background: rgb(198, 99, 252);
+    background: rgb(39, 236, 39);
     color: white;
 
     body {
